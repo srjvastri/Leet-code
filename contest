@@ -1,0 +1,45 @@
+ import java.util.Scanner;
+public class party{
+    public static void input(){
+    int n;
+    int[] k=new int[n];
+     Scanner sc=new Scanner(System.in);
+         for(int j=0 ; j<n ; j++){
+            k[j]=sc.nextInt();
+         }
+    }     
+    public static void main(int n , int[] k){
+        
+       
+         int sum = IntStream.of(k).sum();
+         for(int i = 0 ; i < k.length() ; i++){
+             while(k[0] > sum/2 ){
+                 System.out.println("1");
+                 System.out.println("1");
+             }
+             while(k[0] <= sum/2){
+               ArrayList<Integer> list=new ArrayList<Integer>();
+               list.add(1);
+               if(k[0] >= k[i+1]*2){
+                   list.add(i+1);
+                }
+                else{
+                    continue;
+                }
+               
+             }
+             
+             
+
+            }
+            System.out.print(arr.size());
+            System.out.print(arr);
+            
+         
+         
+         
+         
+         
+         
+    }
+}

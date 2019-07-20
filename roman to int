@@ -1,0 +1,51 @@
+public class Solution {
+    public int romanToInt(String A) {
+        int p = A.length();
+        int sum = Val(A.charAt(p-1)) ;
+        for(int i=0 ; i < p ; i++){
+            if(Val(A.charAt(p-2-i)) > Val(A.charAt(p-1-i))){
+                sum =+ Val(A.charAt(p-2-i)) ;
+            }
+            if(Val(A.charAt(p-2-i)) = Val(A.charAt(p-1-i))){
+                sum =+ Val(A.charAt(p-2-i)) ;
+            }
+            if(Val(A.charAt(p-2-i)) < Val(A.charAt(p-1-i))){
+                sum =- Val(A.charAt(p-2-i)) ;
+            }
+            
+        }
+        return sum ;
+        
+    }
+    public Character Val(char x){
+        if( x == 'I'){
+            char y = x;
+            char y = '1';
+            int I = Character.getNumericValue(x);
+        }
+        if( x == 'V'){
+            char x = "5";
+            int V = Character.getNumericValue(x);
+        }
+        if( x == 'X'){
+            char x = '10';
+            int X = Character.getNumericValue(x);
+        }
+        if( x == 'L'){
+            char x = '50';
+            int L = Character.getNumericValue(x);
+        }
+        if( x == 'C'){
+            char x = '100';
+            int C = Character.getNumericValue(x);
+        }
+        if( x == 'D'){
+            char x = '500';
+            int D = Character.getNumericValue(x);
+        }
+        if( x == 'M'){
+            char x = '1000';
+            int D = Character.getNumericValue(x);
+        }
+    }
+}

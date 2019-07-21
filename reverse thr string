@@ -1,0 +1,18 @@
+public class Solution {
+    public String reverseWords(String a) {
+        a = a.trim();
+        String [] sur = a.split( " ") ;
+        Stack<String> last = new Stack<>() ;
+        int k = a.length();
+        if(k == 1){
+            return a;
+        }
+        for(String p : sur){
+            last.push(p.trim());
+            
+        }
+        return last.toString() ;
+        
+       
+    }
+}

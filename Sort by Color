@@ -1,0 +1,29 @@
+public class Solution {
+    public void sortColors(ArrayList<Integer> a) {
+        ArrayList<Integer> zero = new ArrayList<Integer>(); 
+        ArrayList<Integer> one = new ArrayList<Integer>(); 
+        ArrayList<Integer> two = new ArrayList<Integer>(); 
+        for(int i=0 ; i < a.size() ; i++){
+            if(a.get(i) == 0){
+                zero.add(a.get(i));
+            }
+            if(a.get(i) == 1){
+                one.add(a.get(i));
+            }
+            if(a.get(i) == 2){
+                two.add(a.get(i));
+            }
+        }
+    for(int m=0 ; m< a.size() ; m++){
+        for(int j=0 ; j<zero.size() ; j++){
+            a.set(m , zero.get(j));
+        }
+        for(int k=0 ; k<one.size() ; k++){
+            a.set(m , one.get(k));
+        }
+        for(int l=0 ; l<two.size() ; l++){
+            a.set(m , two.get(l));
+        }
+    }
+    }
+}

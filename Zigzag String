@@ -1,0 +1,27 @@
+public class Solution {
+    public String convert(String A, int B) {
+        StringBuilder [] zig = new StringBuilder[B];
+        char[] a = A.toCharArray();
+        for(int i = 0 ; i < B ; i++){
+            zig[i] = new StringBuilder("");
+        }
+        int m =0 ;
+        while(m < A.length()){
+            for(int i = 0 ; i < B-1 && m < A.length() ; i++){
+                zig[i].append(a[m]);
+                m++;
+            }
+            for(int j = B-1 ; j >0 && m < A.length() ; j-- ){
+                zig[j].append(a[m]);
+                m++ ;
+            }
+            
+        }
+       
+        for(int n =1 ; n < B ; n++){
+            zig[0].append(zig[n]);
+        }
+        return zig[0].toString();
+        
+    }
+}

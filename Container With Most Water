@@ -1,0 +1,26 @@
+class Solution {
+    public int min(int a , int b){
+         if (a<=b){
+            return a;
+         }else 
+            return b;
+    }
+    public int maxArea(int[] height) {
+        int n= height.length;
+        int l =0 ;
+        int r=n-1;
+        int area = 0;
+        if(n==2){
+            return 1*Math.min(height[0], height[1]);
+        }
+        while(l<r){
+            area = Math.max(area , min(height[l] , height[r])*(r-1));
+            if(height[l]<height[r]){
+                l++;
+            }else
+                r--;
+            
+        }
+        return area;
+    }
+}

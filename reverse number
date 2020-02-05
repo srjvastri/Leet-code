@@ -1,0 +1,38 @@
+class Solution {
+    public int reverse(int x) {
+        if(x==0) return 0;
+        Stack<Integer> stk = new Stack<>();
+        
+        boolean ch = false;
+        if(x <0 ){
+            ch = true;
+            x = x*-1;
+        }
+        while(x > 0){
+            int ref = x %10;
+            stk.push(ref);
+            x = x/10;
+        }
+        
+        while(stk.peek() ==0){
+            stk.pop();
+        }
+        int length = stk.size();
+        int n =1;
+        long ans = 0; 
+        ans = ans + stk.pop();
+        while(!stk.isEmpty()){
+            n = n*10;
+            int m = n*stk.pop();
+            ans = ans + m;
+        } 
+        if(ans < Integer.MIN_VALUE || ans > Integer.MAX_VALUE) return 0;
+        if(ch){
+            return (int)ans*-1;
+        }
+        
+        return (int)ans;
+         
+        
+    }
+}

@@ -1,0 +1,24 @@
+class Solution {
+    public String reverseWords(String s) {
+        s = s.trim();
+        String [] str = s.split(" ");
+        Stack<String> stk = new Stack<>();
+        for(String ref : str){
+            ref = ref.trim();
+            stk.push(ref);
+        }
+        String ans = "";
+        while(!stk.empty()){
+            String sss = stk.pop();
+            sss= sss.trim();
+            if(sss.length() > 0){
+                ans = ans + " ";
+                ans = ans + sss;
+            }
+        }
+            
+        ans = ans.trim();
+        return ans;
+        
+    }
+}
